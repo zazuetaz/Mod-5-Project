@@ -38,3 +38,4 @@ Following a Logistic Regression model, following the application of Principal Co
 
 Because the cost of a false negative has a different cost than a false positive, I scored the models on their 'ROC_AUC' score and selected the final model on the highest class-weighted F1 score.
 
+![alt text](https://github.com/zazuetaz/Mod-5-Project/blob/master/xgbroc.png)
