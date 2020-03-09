@@ -38,7 +38,8 @@ Following a Logistic Regression model, following the application of Principal Co
 
 Because the cost of a false negative has a different cost than a false positive, I scored the models on their 'ROC_AUC' score and selected the final model on the highest class-weighted F1 score.
 
-
+Here are the Python libraries utlized for this analysis:
+![alt text](https://github.com/zazuetaz/Mod-5-Project/blob/master/libs.PNG)
 
 ## Results
 The models had fairly low capability of class separability. The XGBoost Classifier returned a performance that showed model capability of ~64.5%. Roughly two-thirds of patients would be correctly identified as a Readmit or Non-readmit.
