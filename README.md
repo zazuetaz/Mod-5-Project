@@ -46,4 +46,14 @@ See the ROC_AUC for the optimized XGBClassifier model here:
 
 While this was the overall outcome, the models had different outcomes when we examined the predictions of the individual classes.
 
+![alt text](https://github.com/zazuetaz/Mod-5-Project/blob/master/xgbclassreport.PNG)
+
+The coding of the target variable was 0: Non-Readmit and 1: Readmit. You can see in the above that the model was much better at predicting patients who were Non-readmits vs those patients who would ultimately be readmitted. This drove up the False Negative rate (Actual Readmits predicted to be Non-readmits), causing recall/sensitivity to suffer. Unfortunately, False Negatives are potentially more costly to hospital's preparedness to handle a large influx of patients or to predict bed availability.
+
+Finally, we were able to understand which features would push prediction outcomes one way or the other:
 ![alt text](https://github.com/zazuetaz/Mod-5-Project/blob/master/shap.png)
+
+As you can see, the greater the number of inpatient and emergency room visits a patient has had in the year before the observed encounter, the more likely they are to be predicted to Readmit in the future. Patients discharge to Hospice (id_6) are less likely to return (they might likely expire in hospice services).
+
+## Conclusion
+Additional analysis could be conducted by reintroducing the discharge diagnosis codes. Given their variety, they were initally discarded, so some medical expertise could be helpful in bucketing those. We could also search for additional information on these patients to better understand how the type of diabetes affects readmittance rates.
